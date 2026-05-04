@@ -1,15 +1,12 @@
 // components/SellPageSideNavbar.jsx
 import { Outlet } from "react-router";
-import { 
-  FaTag, 
-  FaList, 
-  FaBook, 
-  FaPencilAlt, 
-  FaSearch, 
-  FaStickyNote, 
-  FaCalculator, 
+import {
+  FaTag,
+  FaList,
+  FaBook,
+  FaPencilAlt,
+  FaSearch,
   FaCrown,
-  FaSignOutAlt 
 } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router";
 
@@ -18,8 +15,6 @@ const sellMenuItems = [
   { icon: FaBook, label: "Books", path: "/sellpage/active" },
   { icon: FaPencilAlt, label: "Stationary", path: "/sellpage/performance" },
   { icon: FaSearch, label: "Lost & Found", path: "/sellpage/inventory" },
-  { icon: FaStickyNote, label: "Notes", path: "/sellpage/history" },
-
   { icon: FaCrown, label: "Subscription", path: "/sellpage/history" },
 ];
 
@@ -32,10 +27,10 @@ const SellPageSideNavbar = () => {
     // - Clear localStorage/sessionStorage
     // - Clear authentication context
     // - Call logout API
-    
-    localStorage.removeItem('token'); // Example
+
+    localStorage.removeItem("token"); // Example
     sessionStorage.clear(); // Example
-    
+
     navigate("/login"); // Redirect to login page
   };
 
@@ -48,9 +43,9 @@ const SellPageSideNavbar = () => {
         {/* Mobile Toggle Button */}
         <label
           htmlFor="main-drawer"
-          className="btn btn-ghost drawer-button lg:hidden m-2 text-lg"
+          className="btn btn-ghost drawer-button lg:hidden m-2 text-base"
         >
-          <FaList className="mr-2" /> Sell Menu
+          <FaList className="mr-2 text-base" /> Sell Menu
         </label>
 
         {/* Page Content */}
@@ -67,33 +62,28 @@ const SellPageSideNavbar = () => {
           className="drawer-overlay"
         />
         <nav className="menu p-4 w-80 min-h-full bg-teal-600 text-white flex flex-col">
-          <div className="mb-6 px-4 py-3">
-            <h2 className="text-2xl font-bold">Sell Center</h2>
+          <div className="mb-4 px-4 py-2">
+            <h2 className="text-xl font-bold">Sell Center</h2>
           </div>
-          
+
           {/* Menu items - flex-grow pushes logout to bottom */}
-          <ul className="space-y-1 flex-grow">
+          <ul className="space-y-0.5 flex-grow">
             {sellMenuItems.map(({ icon: Icon, label, path }, index) => (
               <li key={index}>
                 <NavLink
                   to={path}
                   className={({ isActive }) =>
-                    `flex items-center gap-4 px-5 py-3 rounded-lg transition-colors text-lg font-medium ${
-                      isActive
-                        ? "bg-teal-700 text-white"
-                        : "hover:bg-teal-500"
+                    `flex items-center gap-3 px-4 py-2 rounded-lg transition-colors text-sm font-medium ${
+                      isActive ? "bg-teal-700 text-white" : "hover:bg-teal-500"
                     }`
                   }
                 >
-                  <Icon className="text-xl" />
+                  <Icon className="text-base" />
                   <span>{label}</span>
                 </NavLink>
               </li>
             ))}
           </ul>
-
-    
-     
         </nav>
       </aside>
     </div>

@@ -5,7 +5,7 @@ import {
   FaBook,
   FaPencilAlt,
   FaSearch,
-  FaStickyNote,
+
   FaCrown,
   FaBars,
   FaCalculator,
@@ -17,7 +17,6 @@ const menuItems = [
   { icon: FaBook, label: "Books", path: "/dashboard/users" },
   { icon: FaPencilAlt, label: "Stationary", path: "/dashboard/products" },
   { icon: FaSearch, label: "Lost & Found", path: "/dashboard/settings" },
-  { icon: FaStickyNote, label: "Notes", path: "/dashboard/settings" },
   { icon: FaCalculator, label: "Calculator", path: "/dashboard/calculator" },
   { icon: FaCrown, label: "Subscriptions", path: "/dashboard/settings" },
 ];
@@ -32,9 +31,9 @@ const SideNavBar = () => {
         {/* Mobile Toggle Button */}
         <label
           htmlFor="main-drawer"
-          className="btn btn-ghost drawer-button lg:hidden m-2 text-lg"
+          className="btn btn-ghost drawer-button lg:hidden m-2 text-base"
         >
-          <FaBars className="mr-2" /> Open Menu
+          <FaBars className="mr-2 text-base" /> Open Menu
         </label>
 
         {/* Page Content */}
@@ -51,21 +50,21 @@ const SideNavBar = () => {
           className="drawer-overlay"
         />
         <nav className="menu p-4 w-80 min-h-full bg-blue-900 text-white flex flex-col">
-          <div className="mb-6 px-4 py-3">
-            <h2 className="text-2xl font-bold">Dashboard</h2>
+          <div className="mb-4 px-4 py-2">
+            <h2 className="text-xl font-bold">Student Dashboard</h2>
           </div>
-          <ul className="space-y-1">
+          <ul className="space-y-0.5">
             {menuItems.map(({ icon: Icon, label, path }, index) => (
               <li key={index}>
                 <NavLink
                   to={path}
                   className={({ isActive }) =>
-                    `flex items-center gap-4 px-5 py-3 rounded-lg transition-colors text-lg font-medium ${
+                    `flex items-center gap-3 px-4 py-2 rounded-lg transition-colors text-sm font-medium ${
                       isActive ? "bg-blue-800 text-white" : "hover:bg-blue-700"
                     }`
                   }
                 >
-                  <Icon className="text-xl" />
+                  <Icon className="text-base" />
                   <span>{label}</span>
                 </NavLink>
               </li>

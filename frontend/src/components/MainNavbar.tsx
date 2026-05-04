@@ -37,7 +37,7 @@ const MainNavbar = () => {
 
       {/* Logo */}
       <div className="flex-1">
-        <NavLink to="/" className="text-lg font-bold">
+        <NavLink to="/dashboard/home" className="text-3xl font-bold">
           CampusMarket
         </NavLink>
       </div>

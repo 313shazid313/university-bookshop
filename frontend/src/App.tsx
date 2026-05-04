@@ -6,6 +6,7 @@ import SellPageSideNavbar from "./components/SellPageSideNavbar";
 import SellItemForm from "./pages/SellItemForm";
 import Home from "./pages/Home";
 import Calculator from "./pages/Calculator";
+import NotFound from "./pages/NotFound";
 
 // Main Layout Component
 function Layout() {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "*",
+    element: <NotFound />, // You can replace this with a NotFound component
+  }
 ]);
 
 export default function App() {
