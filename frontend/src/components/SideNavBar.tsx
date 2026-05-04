@@ -14,7 +14,7 @@ import { NavLink } from "react-router";
 
 const menuItems = [
   { icon: FaHome, label: "Home", path: "/dashboard/home" },
-  { icon: FaBook, label: "Books", path: "/dashboard/users" },
+  { icon: FaBook, label: "Books",  path: "books" },
   { icon: FaPencilAlt, label: "Stationary", path: "/dashboard/products" },
   { icon: FaSearch, label: "Lost & Found", path: "/dashboard/settings" },
   { icon: FaCalculator, label: "Calculator", path: "/dashboard/calculator" },

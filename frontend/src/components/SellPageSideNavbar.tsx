@@ -12,7 +12,7 @@ import { NavLink, useNavigate } from "react-router";
 
 const sellMenuItems = [
   { icon: FaTag, label: "Sell New Item", path: "sell-item-form" },
-  { icon: FaBook, label: "Books", path: "/sellpage/active" },
+  { icon: FaBook, label: "Books", path: "books" },
   { icon: FaPencilAlt, label: "Stationary", path: "/sellpage/performance" },
   { icon: FaSearch, label: "Lost & Found", path: "/sellpage/inventory" },
   { icon: FaCrown, label: "Subscription", path: "/sellpage/history" },

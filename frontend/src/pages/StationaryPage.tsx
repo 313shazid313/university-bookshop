@@ -1,4 +1,4 @@
-const BooksPage = () => {
+const StationaryPage = () => {
   type Item = {
     id: number;
     title: string;
@@ -46,7 +46,6 @@ const BooksPage = () => {
     <div className="max-w-8xl mx-auto px-4 mt-10">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-3xl font-semibold text-gray-800">Books</h2>
-        
       </div>
 
       {/* Grid */}
@@ -81,4 +80,4 @@ const BooksPage = () => {
   );
 };
 
-export default BooksPage;
+export default StationaryPage;

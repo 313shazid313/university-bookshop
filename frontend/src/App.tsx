@@ -7,6 +7,7 @@ import SellItemForm from "./pages/SellItemForm";
 import Home from "./pages/Home";
 import Calculator from "./pages/Calculator";
 import NotFound from "./pages/NotFound";
+import BooksPage from "./pages/BooksPage";
 
 // Main Layout Component
 function Layout() {
@@ -41,9 +42,10 @@ const router = createBrowserRouter([
           </SidebarLayout>
         ),
         children: [
-          {path: "home", element: <Home/>},
-          {path: "calculator", element: <Calculator/>}
-        ]
+          { path: "home", element: <Home /> },
+          { path: "calculator", element: <Calculator /> },
+          { path: "books", element: <BooksPage /> },
+        ],
       },
       {
         path: "sellpage",
@@ -52,14 +54,17 @@ const router = createBrowserRouter([
             <SellPageSideNavbar />
           </SidebarLayout>
         ),
-        children: [{ path: "sell-item-form", element: <SellItemForm /> }],
+        children: [
+          { path: "sell-item-form", element: <SellItemForm /> },
+          { path: "books", element: <BooksPage /> },
+        ],
       },
     ],
   },
   {
     path: "*",
     element: <NotFound />, // You can replace this with a NotFound component
-  }
+  },
 ]);
 
 export default function App() {
