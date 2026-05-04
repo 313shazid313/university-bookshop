@@ -15,7 +15,7 @@ const sellMenuItems = [
   { icon: FaBook, label: "Books", path: "books" },
   { icon: FaPencilAlt, label: "Stationary", path: "stationary" },
   { icon: FaSearch, label: "Lost & Found", path: "lost-found" },
-  { icon: FaCrown, label: "Subscription", path: "subscription" },
+  { icon: FaCrown, label: "Subscription", path: "subscriptions" },
 ];
 
 const SellPageSideNavbar = () => {

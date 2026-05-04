@@ -9,6 +9,7 @@ import Calculator from "./pages/Calculator";
 import NotFound from "./pages/NotFound";
 import BooksPage from "./pages/BooksPage";
 import StationaryPage from "./pages/StationaryPage";
+import Subscription from "./pages/Subscription";
 
 // Main Layout Component
 function Layout() {
@@ -43,10 +44,11 @@ const router = createBrowserRouter([
           </SidebarLayout>
         ),
         children: [
+          { path: "stationary", element: <StationaryPage /> },
           { path: "home", element: <Home /> },
           { path: "calculator", element: <Calculator /> },
           { path: "books", element: <BooksPage /> },
-          { path: "stationary", element: <StationaryPage /> },
+          { path: "subscriptions", element: <Subscription /> },
         ],
       },
       {
@@ -60,6 +62,7 @@ const router = createBrowserRouter([
           { path: "sell-item-form", element: <SellItemForm /> },
           { path: "books", element: <BooksPage /> },
           { path: "stationary", element: <StationaryPage /> },
+          { path: "subscriptions", element: <Subscription /> },
         ],
       },
     ],
